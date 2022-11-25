@@ -1,0 +1,21 @@
+{
+    "alias": "sales-purchase-orders",
+    "icon": "fa fa-cog",
+    "version": "1.0.8",
+    "active": 1,
+    "providers": [
+        "Modules\\SalesPurchaseOrders\\Providers\\Event",
+        "Modules\\SalesPurchaseOrders\\Providers\\Main",
+        "Modules\\SalesPurchaseOrders\\Providers\\Observer",
+        "Modules\\SalesPurchaseOrders\\Providers\\ViewComposer"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "reports": [
+        "Modules\\SalesPurchaseOrders\\Reports\\SalesOrderSummary",
+        "Modules\\SalesPurchaseOrders\\Reports\\PurchaseOrderSummary"
+    ],
+    "widgets": [],
+    "settings": []
+}

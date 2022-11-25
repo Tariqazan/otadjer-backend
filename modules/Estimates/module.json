@@ -1,0 +1,25 @@
+{
+    "alias": "estimates",
+    "version": "2.1.8",
+    "category": "accounting",
+    "icon": "fa fa-check",
+    "active": 1,
+    "providers": [
+        "Modules\\Estimates\\Providers\\Event",
+        "Modules\\Estimates\\Providers\\Main",
+        "Modules\\Estimates\\Providers\\Observer",
+        "Modules\\Estimates\\Providers\\ViewComposer"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "reports": [
+        "Modules\\Estimates\\Reports\\EstimateSummary"
+    ],
+    "settings": [],
+    "widgets": [
+        "Modules\\Estimates\\Widgets\\TotalEstimates",
+        "Modules\\Estimates\\Widgets\\EstimatesByCategory",
+        "Modules\\Estimates\\Widgets\\LatestEstimates"
+    ]
+}

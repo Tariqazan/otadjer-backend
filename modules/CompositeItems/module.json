@@ -1,0 +1,19 @@
+{
+    "alias": "composite-items",
+    "icon": "fa fa-users",
+    "version": "1.1.8",
+    "category": "inventory",
+    "active": 1,
+    "providers": [
+        "Modules\\CompositeItems\\Providers\\Event",
+        "Modules\\CompositeItems\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "reports": [
+        "Modules\\CompositeItems\\Reports\\SaleSummary"
+    ],
+    "widgets": [],
+    "settings": []
+}

@@ -1,0 +1,21 @@
+{
+    "alias": "warehouse-role-management",
+    "icon": "fa fa-cloud",
+    "version": "1.0.0",
+    "category": "other",
+    "active": 1,
+    "keywords": [],
+    "providers": [
+        "Modules\\WarehouseRoleManagement\\Providers\\Event",
+        "Modules\\WarehouseRoleManagement\\Providers\\Main",
+        "Modules\\WarehouseRoleManagement\\Providers\\DynamicRelations",
+        "Modules\\WarehouseRoleManagement\\Providers\\Observer",
+        "Modules\\WarehouseRoleManagement\\Providers\\ViewComposer"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "reports": [],
+    "widgets": [],
+    "settings": []
+}

@@ -1,0 +1,17 @@
+{
+    "alias": "amount-in-words",
+    "icon": "fas fa-font",
+    "version": "1.0.2",
+    "category": "accounting",
+    "active": 1,
+    "providers": [
+        "Modules\\AmountInWords\\Providers\\Main",
+        "Modules\\AmountInWords\\Providers\\ViewComposer"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "reports": [],
+    "widgets": [],
+    "settings": []
+}

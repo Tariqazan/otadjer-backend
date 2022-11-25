@@ -1,0 +1,34 @@
+{
+    "alias": "inventory",
+    "icon": "fa fa-cubes",
+    "version": "3.1.13",
+    "category": "inventory",
+    "active": 1,
+    "providers": [
+        "Modules\\Inventory\\Providers\\Event",
+        "Modules\\Inventory\\Providers\\Main",
+        "Modules\\Inventory\\Providers\\Observer",
+        "Modules\\Inventory\\Providers\\Validation",
+        "Modules\\Inventory\\Providers\\ViewComposer",
+        "Modules\\Inventory\\Providers\\DynamicRelations"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "reports": [
+        "Modules\\Inventory\\Reports\\Item",
+        "Modules\\Inventory\\Reports\\ItemSummary",
+        "Modules\\Inventory\\Reports\\SaleItem",
+        "Modules\\Inventory\\Reports\\PurchaseItem"
+    ],
+    "widgets": [
+        "Modules\\Inventory\\Widgets\\TotalItem",
+        "Modules\\Inventory\\Widgets\\TotalItemIncome",
+        "Modules\\Inventory\\Widgets\\TotalItemExpense",
+        "Modules\\Inventory\\Widgets\\TotalStockLineChart",
+        "Modules\\Inventory\\Widgets\\WarehouseList",
+        "Modules\\Inventory\\Widgets\\TopSellerItems"
+    ],
+    "bulk_actions": [],
+    "settings": []
+}
