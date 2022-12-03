@@ -17,6 +17,7 @@ class Serial extends Migration
             $table->id();
             $table->foreignId('item_id')->constrained('kxm_inventory_items')->onDelete('cascade');
             $table->string('serial_no');
+            $table->string('serial_type')->nullable();
             $table->timestamps();
         });
     }

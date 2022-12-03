@@ -95,6 +95,16 @@ Route::group(['prefix' => 'sales'], function () {
     Route::post('customers/import', 'Sales\Customers@import')->middleware('import')->name('customers.import');
     Route::get('customers/export', 'Sales\Customers@export')->name('customers.export');
     Route::resource('customers', 'Sales\Customers');
+
+    Route::get('/serial-add', function () {
+        return view('sales.invoices.add_serial_no');
+    });
+    Route::get('/serial-index', function () {
+        return view('sales.invoices.serial_no_list');
+    })->name('seral_no_list');
+    Route::get('/add-serial-list', function () {
+        return true;
+    })->name('add.serial_list');
 });
 
 Route::group(['prefix' => 'purchases'], function () {
