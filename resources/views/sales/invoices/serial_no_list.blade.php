@@ -8,6 +8,11 @@
         <div class="col-2 mx-0">
             <label for="floatingInput">Filter Serial No</label>
         </div>
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+        @endif
         <div class="col-4">
             <input type="email" class="form-control" id="floatingInput" placeholder="Serial...">
         </div>
@@ -17,7 +22,7 @@
     <table class="table mt-2">
         <thead class="thead-light">
             <tr>
-            <th width="50px"><input type="checkbox" id="master"></th>
+                <th width="50px"><input type="checkbox" id="master"></th>
                 <th scope="col">#</th>
                 <th scope="col">Serial no</th>
                 <th scope="col">Status</th>
@@ -26,28 +31,32 @@
             </tr>
         </thead>
         <tbody>
-         @php $i=0; $serials = App\Models\Common\Serial::get(); @endphp
-          @foreach($serials as $serial)   
-         <tr id="tr_{{$serial->id}}">
+            @php $j=0; $serials = App\Models\Common\Serial::get(); @endphp
+            @foreach($serials as $serial)
+            @php $alls = explode(',', $serial->serial_no) @endphp
+            @for ($i = 0; $i < count($alls); $i++)
+            <tr id="tr_{{$serial->id}}">
                 <td><input type="checkbox" class="sub_chk" data-id="{{$serial->id}}"></td>
-                <th scope="row">{{++$i}}</th>
-                <td>{{$serial->serial_no}}</td>
+                <th scope="row">{{++$j}}</th>
+                <td>
+                    {{$alls[$i]}}  </td>
                 <td>{{$serial->status==1 ?'Avaiable' :'Deleted'}}</td>
                 <td>{{\Carbon\Carbon::parse($serial->created_at)->format('d/m/Y')}}</td>
-                <td><button class="btn btn-sm btn-secondary" ><i class="fa fa-trash"></i></button></td>
+                <td><button class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></button></td>
             </tr>
+            @endfor
             @endforeach
         </tbody>
     </table>
-    <div class="float-right"> 
+    <!-- <div class="float-right"> 
         <a type="button" class="btn btn-sm btn-success float right" href="{{route('add.serial_list')}}">Add serial</a>
-    </div>
+    </div> -->
     <form method="post" action="{{route('inventory.add.serial_no')}}">
         @csrf
         <div class="form-row align-items-center">
             <div class="col-6">
                 <label class="sr-only" for="inlineFormInput">Name</label>
-                <input type="text" name="serial_no" class="form-control mb-2" id="inlineFormInput" placeholder="Add serial no">
+                <textarea type="text" name="serial_no" class="form-control mb-2" id="inlineFormInput" rows="3" placeholder="Add serial no by comma seperate"></textarea>
             </div>
             <div class="col-2">
                 <button type="submit" class="btn btn-outline-secondary mb-2">Add Serial</button>
